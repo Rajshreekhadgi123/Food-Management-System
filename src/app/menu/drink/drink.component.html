@@ -1,0 +1,75 @@
+<app-header></app-header>
+
+
+<div class="back">
+
+</div>
+
+<div class="container">
+  <div class="row section">
+    <h2>Explore Our Drinks</h2>
+    <p>Eating a wide variety of nutritious foods, including fruit, vegetables, nuts, seeds, and lean protein can help
+      support your overall health. A vast number of foods are both healthy and tasty. By filling your plate with fruits,
+      vegetables, quality protein sources, and other whole foods, you’ll have meals that are colorful, versatile, and
+      good for you.</p>
+
+    <div class="search">
+      <form class="d-flex" style="width: 500px; margin: 0 auto;">
+        <input class="form-control me-2" [(ngModel)]="searchdrink" [ngModelOptions]="{standalone : true}" type="search"
+          placeholder="Search Food From FoodEra..." aria-label="Search" style="border: 2px dotted black">
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-lg-4" *ngFor="let item of ourDrink |filter:searchdrink ; let i=index">
+      <div class="card" style="width: 22rem;">
+        <img src="{{item.image}}" class="card-img-top" alt="..." height="265">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i>{{item.price}}/-</h3>
+          <hr>
+          <a class="btn1" (click)="drinkItem(i)">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+</div>
+
+
+<!-- Adding Food items to another card -->
+
+<div class="card-add">
+
+  <div class="card" style="background-color: rgb(255, 255, 255);">
+    <div class="row g-0 " *ngFor="let item of drinkadd ; let i=index">
+      <div class="col-md-4 ">
+        <img [src]="item.image" class="img-fluid rounded-start " alt="..." width="500" height="500"
+          style="margin-left: 30px; margin-top: 30px;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body ">
+          <h5 class="card-text h4"><b> Food Name :</b> <span
+              style="color: rgb(168, 45, 73); margin-left: 10px;font-family:'Times New Roman', Times, serif;font-weight: bold; ">{{item.name}}
+            </span>
+            <span><img src="assets/dot.webp" alt="" width="30" style="float: right;"></span></h5>
+          <p class="card-text h6 mt-3"><b>Quantity : {{item.quantity}}</b></p>
+          <p class="card-text h6 mt-3"><b>Price: {{item.price}}/-</b></p>
+          <p class="card-text mt-3"><small class="text-muted">Enjoy Our Food</small><button type="button"
+              class="btn btn-danger" (click)="deleteitem(i)" style="float: right;">Remove Item</button></p>
+          <hr style="color: rgb(14, 0, 4);height: 2px;margin-top: 50px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

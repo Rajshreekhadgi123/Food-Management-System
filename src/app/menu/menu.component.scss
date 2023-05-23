@@ -1,0 +1,111 @@
+
+.back{
+    background-image: url(assets/back9.avif);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.back .back-txt {
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: Black;
+}
+
+.back .back-txt h1{
+    font-size: 70px;
+    max-width: 400px;
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #43121d;
+}
+
+
+.section , .section2{
+    margin-top: 150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 1000px;
+    margin-left: 50px;
+}
+
+.section  .content-sec h2{
+text-align: center;
+padding-top: 70px;
+font-weight: 700;
+}
+.section .content-sec p{
+    padding-top: 50px;
+    max-width: 455px;
+    padding-left: 32px;
+    color: grey;
+    font-size: 18px;
+    text-align: justify;
+}
+.section .list{
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-bottom: 150px;
+}
+
+.section .btn1{
+    background-color: rgb(168, 45, 73);
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 1px;
+    font-weight: 600;
+    margin-left: 160px;
+}
+
+.section2  .content-sec2 h2{
+    text-align: center;
+    padding-top: 70px;
+    font-weight: 700;
+    }
+    .section2 .content-sec2 p{
+        padding-top: 50px;
+        max-width: 455px;
+        padding-left: 32px;
+        color: grey;
+        font-size: 18px;
+        text-align: justify;
+    }
+    .section2 .list{
+        margin-top: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        padding-left: 20px;
+        margin-bottom: 150px;
+    }
+    
+    .section2 .btn1{
+        background-color: rgb(168, 45, 73);
+        color: #fff;
+        padding: 15px 35px;
+        border-radius: 1px;
+        font-weight: 600;
+        margin-left: 160px;
+    }
+.footer{
+    background-color: #a82d49;
+    height: 150px;
+    margin-top: 150px;
+}
+.footer .icons{
+   margin-left: 510px;
+   padding-top: 60px;
+   color: #fff;
+}
+.footer .icons i{
+    margin: 0 15px;
+    font-size: 25px;
+}

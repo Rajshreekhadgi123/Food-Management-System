@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+
+<div class="card-add" style="margin-top: 200px;">
+
+  <div class="card" style="background-color: rgb(255, 255, 255);">
+    <div class="row g-0 " *ngFor="let item of ourFoodcart ; let i = index">
+      <div class="col-md-4 ">
+        <img [src]="item.image" class="img-fluid rounded-start " alt="..." width="500" height="500"
+          style="margin-left: 30px; margin-top: 30px;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body ">
+          <h5 class="card-text h4"><b> Food Name :</b> <span
+              style="color: rgb(168, 45, 73); margin-left: 10px;font-family:'Times New Roman', Times, serif;font-weight: bold; ">{{item.name}}
+            </span>
+            <span><img src="assets/dot.webp" alt="" width="30" style="float: right;"></span></h5>
+          <p class="card-text h6 mt-3"><b>Quantity :{{item.quantity}}</b></p>
+          <p class="card-text h6 mt-3"><b>Price: {{item.price}}/-</b></p>
+          <p class="card-text mt-3"><small class="text-muted">Enjoy Our Food</small><button type="button"
+              class="btn btn-danger" (click)="deleteitem(i)" style="float: right;">Remove Item</button></p>
+          <hr style="color: rgb(14, 0, 4);height: 2px;margin-top: 50px;">
+        </div>
+      </div>
+    </div>
+    <h4 style="text-align: center;">Sub Total :</h4>
+    <p style="text-align: center;">6 Items</p>
+  </div>
+
+</div>

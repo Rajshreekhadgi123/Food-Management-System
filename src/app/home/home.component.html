@@ -1,0 +1,232 @@
+<app-header></app-header>
+
+<div class="back">
+  <div class="back-txt">
+    <h1>Good food choices are good investments.</h1>
+    <p>Our Job is to filling your tummy with delicious food and with fast and free delivery.</p>
+    <button type="button" routerLink="/menu" class="btn btn1 mt-3">View Menu<i
+        class="fa-regular fa-rectangle-list"></i></button>
+    <button type="button" routerLink="/aboutus" class="btn btn2 mt-3">Learn More<i
+        class="fa-solid fa-angle-right"></i></button>
+  </div>
+</div>
+
+<div class="section-one">
+  <div class="container ">
+    <div class="row text-inner">
+      <div class="col-lg-3">
+        <h1>1287+</h1>
+        <h6>SAVINGS</h6>
+      </div>
+      <div class="col-lg-3">
+        <h1>1287+</h1>
+        <h6>PHOTOS</h6>
+
+      </div>
+      <div class="col-lg-3">
+        <h1>1287+</h1>
+        <h6>ROCKETS</h6>
+
+      </div>
+      <div class="col-lg-3">
+        <h1>1287+</h1>
+        <h6>GLOBES</h6>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row section-two">
+      <div class="col-lg-6">
+        <img src="assets/img5.png" alt="" width="650" height="420">
+      </div>
+      <div class="col-lg-6 row-content">
+        <h2>We pride ourselves on making real food from the best ingredients.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit amet
+          leo. Mauris feugiat erat tellus.</p>
+        <button type="button" routerLink="/aboutus" class="btn btn3 mt-3">Learn More</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="back2" style="margin-top: 700px;">
+  <div class="back-txt2">
+    <h1>When a man's stomach is full it makes no
+      difference whether he is rich or poor..</h1>
+    <p>Our Job is to filling your tummy with delicious food and with fast and free delivery.</p>
+    <button type="button" routerLink="/login" class="btn btn1 mt-3">View Menu</button>
+
+
+  </div>
+</div>
+
+<div class="model-box">
+  <div class="model-heading">
+    <h3>Our Special Food and Drinks</h3>
+  </div>
+
+  <div class="btn-content ">
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn1 mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal"
+      style="margin-left: 540px;">
+      Add Food
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Food Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="mb-3 mt-3">
+                <label for="name" class="form-label">Food Name:</label>
+                <input type="text" [(ngModel)]="name" class="form-control" id="name" placeholder="Enter Food Name"
+                  name="email">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Food Price:</label>
+                <input type="text" [(ngModel)]="price" class="form-control" id="price" placeholder="Enter Price"
+                  name="pswd">
+              </div>
+
+              <label for="sel1" class="form-label">Select Quantity:</label>
+              <select class="form-select" id="sel1" name="sellist1" [(ngModel)]="quantity"
+                [ngModelOptions]="{standalone: true}">
+                <option>Please Select</option>
+                <option value="1" ng-options="ditem.1">1</option>
+                <option value="2" ng-options="ditem.2">2</option>
+                <option value="3" ng-options="ditem.3">3</option>
+                <option value="4" ng-options="ditem.4">4</option>
+                <option value="5" ng-options="ditem.5">5</option>
+              </select>
+
+              <div class="mb-3 mt-3">
+                <label for="food" class="form-label">Food Image:</label>
+                <input type="file" (change)="onselectFile($event)" class="form-control" id="food"
+                  placeholder="Enter Price" name="pswd">
+                <!-- <input type="file" class="form-control" id="food" placeholder="Enter Price" name="pswd"> -->
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btncle" (click)="clear();">Clear</button>
+
+            <button type="button" class="btn btn1" (click)="foodmodal();">Add Food</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn2 mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+      style="margin-left: 20px;">
+      Add Drink
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Drink Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <form>
+              <div class="mb-3 mt-3">
+                <label for="name" class="form-label">Drink Name:</label>
+                <input type="text" [(ngModel)]="name" class="form-control" id="name" placeholder="Enter Food Name"
+                  name="email">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">Drink Price:</label>
+                <input type="text" [(ngModel)]="price" class="form-control" id="price" placeholder="Enter Price"
+                  name="pswd">
+              </div>
+
+              <label for="sel1" class="form-label">Select Quantity:</label>
+              <select class="form-select" id="sel1" name="sellist1" [(ngModel)]="quantity"
+                [ngModelOptions]="{standalone: true}">
+                <option>Please Select</option>
+                <option value="1" ng-options="ditem.1">1</option>
+                <option value="2" ng-options="ditem.2">2</option>
+                <option value="3" ng-options="ditem.3">3</option>
+                <option value="4" ng-options="ditem.4">4</option>
+                <option value="5" ng-options="ditem.5">5</option>
+              </select>
+
+              <div class="mb-3 mt-3">
+                <label for="food" class="form-label">Drink Image:</label>
+                <input type="file" (change)="onselectFile($event)" class="form-control" id="food" name="pswd">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btncle" (click)="clear();">Clear</button>
+
+            <button type="button" class="btn btn1" (click)="drinkmodal()">Add Drink</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row foodcards" style="margin-top: 100px; ">
+    <div class="col-lg-6" style="padding-left: 100px;">
+      <div class="food-card" *ngFor="let item of ourFood;let i =index">
+        <div class="card" style="width: 22rem; margin-bottom:50px;">
+          <img [src]="item.image" class="card-img-top" alt="..." height="250">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <hr>
+            <a class="btn1" routerLink="/menu/food">View Food</a>
+          </div>
+        </div>
+      </div>
+    </div><br /><br /><br />
+
+    <div class="col-lg-6" style="padding-left: 100px; margin-bottom: 100px; ">
+      <div class="food-card" *ngFor="let ditem of ourdrink;let i =index">
+        <div class="card" style="width: 22rem;">
+          <img [src]="ditem.image" class=" card-img-top" alt="..." height="250">
+          <div class="card-body">
+            <h5 class="card-title">{{ditem.name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+
+            <hr>
+            <a class="btn1" routerLink="/menu/drink">View Drink</a>
+          </div>
+        </div>
+      </div>
+    </div><br /><br /><br />
+
+  </div>
+</div>
+
+
+
+<app-footer></app-footer>

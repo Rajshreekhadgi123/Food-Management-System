@@ -1,0 +1,36 @@
+<div class="back">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 row1">
+      </div>
+      <div class="col-lg-6 row2">
+        <form action="/action_page.php">
+          <h5>User Login</h5>
+          <div class="mb-3 mt-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" [(ngModel)]="email" class="form-control" id="email" placeholder="Enter email"
+              name="email">
+          </div>
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Password:</label>
+            <input type="password" [(ngModel)]="password" class="form-control" id="password"
+              placeholder="Enter password" name="pswd">
+          </div>
+
+          <div class="btnflex d-flex">
+            <button type="submit" (click)="submitlogin()" class="btn btn-warning">Login
+            </button>
+            <p style="margin-left: 10px; padding-top: 30px;">Not a Member?<a
+                style="color: rgb(58, 58, 219); font-weight: 600; padding-left:8px; cursor: pointer;" routerLink="">Sign
+                Up.</a>
+            </p>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
